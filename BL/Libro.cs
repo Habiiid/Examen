@@ -64,10 +64,11 @@ namespace BL
             }catch (Exception ex)
             {
                 result.Message = "Algo salio mal" + ex.Message;
+                
             }
             
             
-            return new ML.Result();
+            return result;
         }
 
     }

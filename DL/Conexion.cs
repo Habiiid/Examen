@@ -11,7 +11,7 @@ namespace DL
     { 
         public static string GetConexion()
         {
-            return ConfigurationManager.ConnectionStrings["Examen"].ConnectionString.ToString();
+            return ConfigurationManager.ConnectionStrings["Examen"].ConnectionString;
         }
     }
 }

@@ -8,17 +8,18 @@ namespace PL
 {
     public class Libro
     {
-        public static void GetAll(){
+        public static void GetAll()
+        {
 
             ML.Result result = BL.Libro.GetAll();
+            
             if (result.Correct)
             {
                 
                 Console.WriteLine("Los Libros son: ");
 
-                //foreach (result.Objecs in ) {
-                   
-                    ML.Libro libro = new ML.Libro();
+                foreach (ML.Libro libro in result.Objetcs) {
+                  
 
                     Console.WriteLine("Nombre: " + libro.Nombre);
 
@@ -34,11 +35,12 @@ namespace PL
 
                     Console.WriteLine("IdGenero: " + libro.Genero.IdGenero);
 
-               // }
+               }
 
-                Console.ReadLine();
+               
                 
             }
+            Console.ReadLine();
         }
         
     }
